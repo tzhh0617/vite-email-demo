@@ -95,7 +95,7 @@ import { EMAIL_TEMPLATE, EMAIL_TEMPLATE_FILLED } from "@/constants/email.js";
 
 const leftTab = ref("preview");
 const rightTab = ref("preview");
-const activePane = ref("left");
+const activePane = ref("right");
 
 function copyRaw() {
   navigator.clipboard.writeText(EMAIL_TEMPLATE);

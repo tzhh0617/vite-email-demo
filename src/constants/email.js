@@ -34,9 +34,11 @@ export const EMAIL_TEMPLATE = `
                 <td style="height: 20px;"></td>
               </tr>
               <tr>
-                <td>Please be informed that there is a new task <b>\${taskName}</b>
+                <td>
+                <div class="editable">Please be informed that there is a new task <b>\${taskName}</b>
                   <#if dueDate !="">which will be due at \${dueDate}</#if>
                   <#if dueDateTimeZone !=""><span style="color: #C2C7CC;"> | Your Time-zone: \${dueDateTimeZone}</span></#if>.
+                </div>
                 </td>
               </tr>
             </tbody>
