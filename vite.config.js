@@ -8,4 +8,9 @@ export default defineConfig({
     open: true,
   },
   plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
 })

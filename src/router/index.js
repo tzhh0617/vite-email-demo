@@ -1,23 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
-  {
-    path: '/',
-    redirect: '/solution-one',
-  },
-  {
-    path: '/solution-one',
-    component: () => import('../pages/solution-tinymce/TinyMCEDemo.vue'),
-  },
-  {
-    path: '/solution-two',
-    component: () => import('../pages/SolutionTwo.vue'),
-  },
+    {
+        path: '/',
+        component: () => import('../pages/email-preview/EmailPreviewDemo.vue'),
+    },
+    {
+        path: '/solution-one',
+        component: () => import('../pages/solution-tinymce/TinyMCEDemo.vue'),
+    },
+    {
+        path: '/solution-two',
+        component: () => import('../pages/SolutionTwo.vue'),
+    },
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+    history: createWebHistory(),
+    routes,
 })
 
 export default router
