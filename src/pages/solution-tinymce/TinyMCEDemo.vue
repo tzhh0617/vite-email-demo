@@ -1,17 +1,18 @@
 <template>
   <div class="page">
     <h2>TinyMCE 富文本编辑器</h2>
-    <Editor
-      v-model="content"
-      apiKey="avs0zhkuua6qsxgcky76lrar007kt9qxd1zmnld8xkhgnecw"
-      :init="{
-        height: 500,
-        plugins:
-          'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-        toolbar:
-          'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-      }"
-    />
+      <Editor
+        v-model="content"
+        :init="{
+          height: 500,
+          plugins:
+            'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+          toolbar:
+            'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        }"
+        :tinymceScriptSrc="'/node_modules/tinymce/tinymce.min.js'"
+        licenseKey="gpl"
+      />
     <el-button type="primary" style="margin: 16px 0;" @click="setFilledContent">填充邮件内容</el-button>
     <div class="card">
       <h3>内容预览：</h3>
@@ -37,7 +38,7 @@ function setFilledContent() {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .page {
   max-width: 800px;
   margin: 0 auto;
@@ -57,5 +58,10 @@ function setFilledContent() {
   font-size: 13px;
   font-family: "Fira Mono", "Consolas", "Menlo", monospace;
   overflow-x: auto;
+}
+:deep(.tox-tinymce){
+  .tox-promotion{
+    display: none;
+  }
 }
 </style>
