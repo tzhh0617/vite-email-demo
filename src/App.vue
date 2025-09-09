@@ -6,7 +6,7 @@ import { ref } from 'vue'
 <template>
   <div class="app-container">
     <el-menu :default-active="$route.path" mode="horizontal" router class="nav-bar">
-      <el-menu-item index="/solution-one">技术方案一</el-menu-item>
+      <el-menu-item index="/solution-one">TinyMCE 富文本编辑器</el-menu-item>
       <el-menu-item index="/solution-two">技术方案二</el-menu-item>
     </el-menu>
     <main class="main-content">

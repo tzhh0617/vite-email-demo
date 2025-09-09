@@ -7,12 +7,10 @@ const routes = [
   },
   {
     path: '/solution-one',
-    name: 'SolutionOne',
-    component: () => import('../pages/SolutionOne.vue'),
+    component: () => import('../pages/solution-tinymce/TinyMCEDemo.vue'),
   },
   {
     path: '/solution-two',
-    name: 'SolutionTwo',
     component: () => import('../pages/SolutionTwo.vue'),
   },
 ]
