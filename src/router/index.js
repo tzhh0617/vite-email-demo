@@ -6,12 +6,12 @@ const routes = [
         component: () => import('../pages/email-preview/EmailPreviewDemo.vue'),
     },
     {
-        path: '/solution-one',
+        path: '/solution-two',
         component: () => import('../pages/solution-tinymce/TinyMCEDemo.vue'),
     },
     {
-        path: '/solution-two',
-        component: () => import('../pages/SolutionTwo.vue'),
+        path: '/solution-one',
+        component: () => import('../pages/solution-wang/WangDemo.vue'),
     },
 ]
 

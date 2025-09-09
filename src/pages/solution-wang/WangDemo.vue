@@ -1,16 +1,8 @@
 <template>
   <div class="page">
-    <h2>TinyMCE 富文本编辑器</h2>
+    <h2>WangEditor 富文本编辑器</h2>
     <Editor
       v-model="content"
-      apiKey="avs0zhkuua6qsxgcky76lrar007kt9qxd1zmnld8xkhgnecw"
-      :init="{
-        height: 500,
-        plugins:
-          'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-        toolbar:
-          'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-      }"
     />
     <el-button type="primary" style="margin: 16px 0;" @click="setFilledContent">填充邮件内容</el-button>
     <div class="card">
@@ -26,11 +18,11 @@
 
 <script setup>
 import { ref } from "vue";
-import Editor from "@tinymce/tinymce-vue";
+import Editor from "@/components/WangRichEditor/RichEditor.vue";
 import { ElButton } from 'element-plus';
 import { EMAIL_TEMPLATE_FILLED } from '@/constants/email.js';
 
-const content = ref("<p>欢迎使用 TinyMCE 富文本编辑器！</p>");
+const content = ref("<p>欢迎使用 WangEditor 富文本编辑器！</p>");
 
 function setFilledContent() {
   content.value = EMAIL_TEMPLATE_FILLED;

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^6.3.0",
+    "@wangeditor-next/editor": "^5.6.45",
     "element-plus": "^2.11.2",
     "tinymce": "^8.0.2",
     "vue": "^3.5.18",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
+    "sass-embedded": "^1.92.1",
     "vite": "^7.1.2"
   }
 }
